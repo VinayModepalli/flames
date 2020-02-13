@@ -1,0 +1,52 @@
+<script>
+
+function f(){
+    a=document.getElementById("fname").value;
+    b=document.getElementById("lname").value;
+    for (var i = 0; i < a.length; i++) { 
+            for (var j = 0; j < b.length; j++){
+                if (a.charAt(i) == b.charAt(j)){
+                    a = a.replace(a.charAt(i), "");
+                    b = b.replace(b.charAt(j), "");
+                    i--;
+                    break;
+            }
+        }
+    }
+    var count = a.length + b.length ;
+    var c2 = count%6;
+    var w = "FLAMES";
+    for (var k=0; k < 5 ; k++ ){
+    c2 = count % (6-k);
+    w = w.slice(c2,) + w.slice(0,c2);
+    w = w.replace(w.charAt(w.length-1),"");
+    //alert(w);
+    //alert("two");
+    }
+    //alert(w);
+    switch (w) {
+    	case "F":
+    		O = "Friend";
+   	 		break;
+  		case "L":
+    		O = "Lover";
+    		break;
+  		case "A":
+     		O = "Attraction";
+    		break;
+  		case "M":
+    		O = "Marriage";
+    		break;
+  		case "E":
+    		O = "Enemy";
+    		break;
+  		case "S":
+    		O = "Sister";
+    		break;
+  		default:
+    		alert("Something Seems Wrong");
+	}
+    document.getElementById("output").innerHTML = O;
+    }
+
+</script>
