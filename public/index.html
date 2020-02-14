@@ -17,7 +17,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,8 +29,23 @@
     -->
     <title>React App</title>
     <style>
-
-    #root {
+      body {
+    background-color: #193c6d;
+    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
+    background-image: url(//img.alicdn.com/tps/TB1d.u8MXXXXXXuXFXXXXXXXXXX-1900-790.jpg);
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
+    background-image: -webkit-linear-gradient(135deg, #003073, #029797);
+    background-image: -moz-linear-gradient(45deg, #003073, #029797);
+    background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
+    background-image: -o-linear-gradient(45deg, #003073, #029797);
+    background-image: linear-gradient(135deg, #003073, #029797);
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+    color: white
+}
+    #hell {
       background-image: url("https://i.ytimg.com/vi/nizeUibz0d8/maxresdefault.jpg") ;
       background-size: cover;
       background-position: center center;
@@ -39,34 +54,17 @@
       bottom: 0;
       height: 100vh;
       z-index: -10;
-      color:white;
+      
     }
-    .example_e {
-border: none;
-background: #404040;
-color: #ffffff !important;
-font-weight: 100;
-padding: 20px;
-text-transform: uppercase;
-border-radius: 6px;
-display: inline-block;
-transition: all 0.3s ease 0s;
-}
-.example_e:hover {
-color: #404040 !important;
-font-weight: 700 !important;
-letter-spacing: 3px;
-background: none;
--webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
--moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-transition: all 0.3s ease 0s;
-}
-
+    
     </style>
   </head>
   <body>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="" id="root" align=center></div>
+    <div  align="center">
+      <div id="root"></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -77,5 +75,6 @@ transition: all 0.3s ease 0s;
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script src="./float.js"></script>
   </body>
 </html>

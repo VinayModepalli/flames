@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css'
+import './App.css';
 class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      firstname :"",
-      secondname:"",
-      result:""
+      firstname :"Vinay",
+      secondname:"Kumar",
+      result:"f"
     }
   }
   handleChange = (e) => {
@@ -55,13 +55,13 @@ class App extends Component{
         <br></br><br></br>
           <label htmlFor="firstname">Your Name</label>
           <br></br>
-          <input type="text" color="black" className="form-control" id="firstname" onChange={this.handleChange} />
+          <input type="text" color="black" value={this.state.firstname} id="firstname" onChange={this.handleChange} ></input>
           <br></br>
           <label htmlFor="secondname">Your Crush's Name</label>
           <br></br>
-          <input type="text" className="form-control" id="secondname"  onChange={this.handleChange} />
+          <input type="text"  id="secondname" value={this.state.secondname} onChange={this.handleChange} ></input>
           <br></br><br></br>
-          <button>Go</button>
+          <button onClick={this.handleSubmit}>Go</button>
         </form>
         <div>Result: {this.state.result}</div>
         </div>
