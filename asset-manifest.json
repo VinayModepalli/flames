@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/flames/static/css/main.b022ca64.chunk.css",
-    "main.js": "/flames/static/js/main.413569b4.chunk.js",
-    "main.js.map": "/flames/static/js/main.413569b4.chunk.js.map",
+    "main.css": "/flames/static/css/main.a1912b05.chunk.css",
+    "main.js": "/flames/static/js/main.9fb5acd0.chunk.js",
+    "main.js.map": "/flames/static/js/main.9fb5acd0.chunk.js.map",
     "runtime-main.js": "/flames/static/js/runtime-main.d44cec68.js",
     "runtime-main.js.map": "/flames/static/js/runtime-main.d44cec68.js.map",
     "static/js/2.b97c970c.chunk.js": "/flames/static/js/2.b97c970c.chunk.js",
     "static/js/2.b97c970c.chunk.js.map": "/flames/static/js/2.b97c970c.chunk.js.map",
     "index.html": "/flames/index.html",
-    "precache-manifest.589294624d5d2afd2f9c13adf939948a.js": "/flames/precache-manifest.589294624d5d2afd2f9c13adf939948a.js",
+    "precache-manifest.46e7ef59b8ba06950348df2c3ed3810e.js": "/flames/precache-manifest.46e7ef59b8ba06950348df2c3ed3810e.js",
     "service-worker.js": "/flames/service-worker.js",
-    "static/css/main.b022ca64.chunk.css.map": "/flames/static/css/main.b022ca64.chunk.css.map",
+    "static/css/main.a1912b05.chunk.css.map": "/flames/static/css/main.a1912b05.chunk.css.map",
     "static/js/2.b97c970c.chunk.js.LICENSE.txt": "/flames/static/js/2.b97c970c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d44cec68.js",
     "static/js/2.b97c970c.chunk.js",
-    "static/css/main.b022ca64.chunk.css",
-    "static/js/main.413569b4.chunk.js"
+    "static/css/main.a1912b05.chunk.css",
+    "static/js/main.9fb5acd0.chunk.js"
   ]
 }
