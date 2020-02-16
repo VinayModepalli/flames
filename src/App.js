@@ -11,7 +11,7 @@ import {
 import ReactGA from 'react-ga';
 
 ReactGA.initialize('UA-132664231-4');
-
+ReactGA.pageview('/homepage');
 
 class App extends Component{
   constructor(props){
