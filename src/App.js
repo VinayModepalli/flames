@@ -8,6 +8,10 @@ import {
   faInstagram,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-132664231-4');
+
 
 class App extends Component{
   constructor(props){
