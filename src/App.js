@@ -8,6 +8,7 @@ import {
   faInstagram,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
+
 class App extends Component{
   constructor(props){
     super(props);
@@ -16,6 +17,7 @@ class App extends Component{
       secondname:"",
       result:"",
       rtext: null,
+      loading: 1
     }
   }
   handleChange = (e) => {
@@ -31,6 +33,19 @@ class App extends Component{
   calculate = () => {
     var a=this.state.firstname;
     var b=this.state.secondname;
+    if (a === "" && b === ""){
+      this.setState({
+        rtext: "Come on.. Type Something Yaar..!!"
+      })
+      return;
+    }
+    else if (a === "" || b === ""){
+      this.setState({
+        rtext: "Enter both of your names yaarr..! "
+      })
+      return;
+    }
+    else{
     for (var i = 0; i < a.length; i++) { 
             for (var j = 0; j < b.length; j++){
                 if (a.charAt(i) === b.charAt(j)){
@@ -65,10 +80,26 @@ class App extends Component{
       rtext:ad
     })
   }
- 
+  }
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({
+        loading: 0
+      })
+    }, 3000);
+  }
  
   render () {
-    return (
+    if (this.state.loading === 1){
+      return (
+        <div className="App container">
+          <br></br><br></br><br></br><br></br><br></br>
+        <h2>This website have no Databases.. You can check in my Github Code...</h2>
+      </div>
+      )
+    }
+    else {
+      return (
         <div className="App container" >
           <br></br><br></br>
           <h2>FLAMES</h2>
@@ -76,13 +107,13 @@ class App extends Component{
         <br></br><br></br>
           <label htmlFor="firstname">Your Name</label>
           <br></br>
-          <input type="text" color="black" value={this.state.firstname} id="firstname" onChange={this.handleChange} ></input>
+          <input type="text" color="black" value={this.state.firstname} id="firstname" onChange={this.handleChange} required ></input>
           <br></br><br></br>
           <label htmlFor="secondname">Your Crush's Name</label>
           <br></br>
-          <input type="text"  id="secondname" value={this.state.secondname} onChange={this.handleChange} ></input>
+          <input type="text"  id="secondname" value={this.state.secondname} onChange={this.handleChange} required ></input>
           <br></br><br></br>
-          <button onClick={this.handleSubmit}>Go</button>
+          <button className="btn btn-primary" onClick={this.handleSubmit}>Go</button>
         </form>
         <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
           <div>
@@ -92,10 +123,10 @@ class App extends Component{
         <br></br><br></br><br></br>
         <div className="container">
           <div className="row">
-          <div className="col"><a href="facebook.com/vinay.modepalli/" className="facebook social"><FontAwesomeIcon icon={faFacebook} size="2x" /></a></div>
-          <div className="col"><a href="https://www.instagram.com/iam__vinaykumar/" className="instagram social"><FontAwesomeIcon icon={faInstagram} size="2x" /></a></div>
-          <div className="col"><a href="https://github.com/VinayModepalli" className="github social"><FontAwesomeIcon icon={faGithub} size="2x" /></a></div>
-          <div className="col"><a href="https://www.youtube.com/channel/UCT-PxxuoCnyKeLv6DcLcCJg" className="youtube social"><FontAwesomeIcon icon={faYoutube} size="2x" /></a></div>
+          <div className="col"><a href="https://www.facebook.com/vinay.modepalli/" className="shadow facebook social"><FontAwesomeIcon icon={faFacebook} size="2x" /></a></div>
+          <div className="col"><a href="https://www.instagram.com/iam__vinaykumar/" className="shadow instagram social"><FontAwesomeIcon icon={faInstagram} size="2x" /></a></div>
+          <div className="col"><a href="https://github.com/VinayModepalli" className="shadow github social"><FontAwesomeIcon icon={faGithub} size="2x" /></a></div>
+          <div className="col"><a href="https://www.youtube.com/channel/UCT-PxxuoCnyKeLv6DcLcCJg" className="shadow youtube social"><FontAwesomeIcon icon={faYoutube} size="2x" /></a></div>
           
           </div>
         </div>
@@ -104,7 +135,8 @@ class App extends Component{
         </div>
         
 
-    )
+      )
+    }
   }
 }
 
