@@ -128,7 +128,7 @@ class App extends Component{
         <div className="container">
           <div className="row">
           <div className="col"><a href="https://www.facebook.com/vinay.modepalli/" className="shadow facebook social"><FontAwesomeIcon icon={faFacebook} size="2x" /></a></div>
-          <div className="col"><a href="https://www.instagram.com/iam__vinaykumar/" className="shadow instagram social"><FontAwesomeIcon icon={faInstagram} size="2x" /></a></div>
+          <div className="col"><a href="https://www.instagram.com/vinaymodepalli/" className="shadow instagram social"><FontAwesomeIcon icon={faInstagram} size="2x" /></a></div>
           <div className="col"><a href="https://github.com/VinayModepalli" className="shadow github social"><FontAwesomeIcon icon={faGithub} size="2x" /></a></div>
           <div className="col"><a href="https://www.youtube.com/channel/UCT-PxxuoCnyKeLv6DcLcCJg" className="shadow youtube social"><FontAwesomeIcon icon={faYoutube} size="2x" /></a></div>
           
